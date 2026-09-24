@@ -1,9 +1,14 @@
-add console.log("Executed");
+// Architectural pattern: MVC, Dependency Injection, MVP
 
-import moment from "moment";
+// MVC = MODEL VIEW CONTROLLER
 
-const currentTime = moment().format("YYYY MM DD");
-console.log(currentTime);
+// Design pattern: Midddleware, Decotar
 
-const person: string = "Nortoy";
-const count: number = 100;
+
+
+import dotenv from "dotenv";
+dotenv.config();
+
+console.log("PORT:", process.env.PORT);
+
+console.log("MONGO_URL:", process.env.MONGO_URL);
