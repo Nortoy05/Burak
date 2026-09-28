@@ -1,14 +1,24 @@
 
-// task N
-function palindromCheck(input: string): boolean {
-    const reverseInput = input.toLowerCase().split("").reverse().join("");
-    if (input.toLowerCase() === reverseInput) {
-        return true
-    }
-    return false
-}
+/** Project Standards:
+ *   - Logging standards
+ *   - Naming standards:  
+ *      function, method, variable => CAMEL.    goHome
+ *      class => PASCAL                         MemberService
+ *      folder => KEBAB
+ *      css => SNAKE                            button_style
+ *   - Error Handling standards
+ */
 
-console.log(palindromCheck("dad"));
+// task N
+// function palindromCheck(input: string): boolean {
+//     const reverseInput = input.toLowerCase().split("").reverse().join("");
+//     if (input.toLowerCase() === reverseInput) {
+//         return true
+//     }
+//     return false
+// }
+
+// console.log(palindromCheck("dad"));
 
 // Task M
 // function getSquareNumbers(arr: number[]) {
