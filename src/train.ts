@@ -1,19 +1,28 @@
+// Task P
+
+function objectToArray(obj: Record<string, number>): [string, number][] {
+  return Object.entries(obj);
+}
+
+console.log(objectToArray({ a: 10, b: 20 }));     
+
+
 
 // Task O
 
-function calculateSumOfNumbers(arr: any[]): number {
-    let sum = 0;
+// function calculateSumOfNumbers(arr: any[]): number {
+//     let sum = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === "number") {
-            sum += arr[i];
-        }
-    }
+//     for (let i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] === "number") {
+//             sum += arr[i];
+//         }
+//     }
 
-    return sum;
-}
+//     return sum;
+// }
 
-console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+// console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
 
 /** Project Standards:
  *   - Logging standards
