@@ -1,10 +1,10 @@
 // Task P
 
-function objectToArray(obj: Record<string, number>): [string, number][] {
-  return Object.entries(obj);
-}
+// function objectToArray(obj: Record<string, number>): [string, number][] {
+//   return Object.entries(obj);
+// }
 
-console.log(objectToArray({ a: 10, b: 20 }));     
+// console.log(objectToArray({ a: 10, b: 20 }));     
 
 
 
@@ -32,6 +32,13 @@ console.log(objectToArray({ a: 10, b: 20 }));
  *      folder => KEBAB
  *      css => SNAKE                            button_style
  *   - Error Handling standards
+ * 
+ * Triditional API
+ * Rest API 
+ * GraphQL API
+ * 
+ * Traditional FD => SSR (Adminka) => EJS
+ * Modern FD => SPA (Users' application) => REACT
  */
 
 // task N
