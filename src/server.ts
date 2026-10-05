@@ -19,7 +19,8 @@ import app from "./app";
     console.log("MongoDB connection succeed");
     const PORT = process.env.PORT ?? 5005;
     app.listen(PORT, function () {
-        console.log(`The server is running succssfully on port: ${PORT}`);
+        console.info(`The server is running succssfully on port: ${PORT}`);
+        console.info(`Admin project on http://localhost:${PORT}/admin \n`);
     });
  })
  .catch((err) => console.log("ERROR on connection MongoDB", err));
