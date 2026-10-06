@@ -1,11 +1,25 @@
-// Task Q
 
-function hasProperty(obj: object, property: string): boolean {
-  return property in obj;
+// Task R
+function calculate(str: string): number {
+  const numbers = str.split("+");     
+  let sum = 0;
+
+  for (const n of numbers) {
+    sum += Number(n.trim());                   
+  }
+  return sum;
 }
 
-console.log(hasProperty({ name: "BMW", model: "M3", year: 2020 }, "year"));
-console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
+console.log(calculate("1+3"));  
+
+// Task Q
+
+// function hasProperty(obj: object, property: string): boolean {
+//   return property in obj;
+// }
+
+// console.log(hasProperty({ name: "BMW", model: "M3", year: 2020 }, "year"));
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
 
 // Task P
 
