@@ -1,12 +1,19 @@
+// Task Q
+
+function hasProperty(obj: object, property: string): boolean {
+  return property in obj;
+}
+
+console.log(hasProperty({ name: "BMW", model: "M3", year: 2020 }, "year"));
+console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
+
 // Task P
 
 // function objectToArray(obj: Record<string, number>): [string, number][] {
 //   return Object.entries(obj);
 // }
 
-// console.log(objectToArray({ a: 10, b: 20 }));     
-
-
+// console.log(objectToArray({ a: 10, b: 20 }));
 
 // Task O
 
@@ -26,17 +33,17 @@
 
 /** Project Standards:
  *   - Logging standards
- *   - Naming standards:  
+ *   - Naming standards:
  *      function, method, variable => CAMEL.    goHome
  *      class => PASCAL                         MemberService
  *      folder => KEBAB
  *      css => SNAKE                            button_style
  *   - Error Handling standards
- * 
+ *
  * Triditional API
- * Rest API 
+ * Rest API
  * GraphQL API
- * 
+ *
  * Traditional FD => SSR (Adminka) => EJS
  * Modern FD => SPA (Users' application) => REACT
  */
@@ -63,4 +70,3 @@
 // }
 
 // console.log(getSquareNumbers([2, 4, 6]));
-
