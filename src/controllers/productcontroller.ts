@@ -17,21 +17,22 @@ productController.getAllProducts = async (req: Request, res: Response) => {
     }
 };
 
-productController.createNewProducts = async (req: Request, res: Response) => {
+productController.createNewProduct = async (req: Request, res: Response) => {
     try {
-        console.log("createNewProducts");
+        console.log("createNewProduct");
+        res.send("DONE!");
     }   catch (err) {
-        console.log("Error, createNewProducts:", err);
+        console.log("Error, createNewProduct:", err);
         if (err instanceof Errors) res.status(err.code).json(err);
         else res.status(Errors.standard.code).json(Errors.standard);
     }
 };
 
-productController.updateChosenProducts = async (req: Request, res: Response) => {
+productController.updateChosenProduct = async (req: Request, res: Response) => {
     try {
-        console.log("updateChosenProducts");
+        console.log("updateChosenProduct");
     }   catch (err) {
-        console.log("Error, updateChosenProducts:", err);
+        console.log("Error, updateChosenProduct:", err);
         if (err instanceof Errors) res.status(err.code).json(err);
         else res.status(Errors.standard.code).json(Errors.standard);
     }
