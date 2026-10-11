@@ -1,16 +1,30 @@
 
-// Task R
-function calculate(str: string): number {
-  const numbers = str.split("+");     
-  let sum = 0;
+// Task S 
+function missingNumber(nums: number[]): number {
+  const n = nums.length;
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = nums.reduce((sum, num) => sum + num, 0);
 
-  for (const n of numbers) {
-    sum += Number(n.trim());                   
-  }
-  return sum;
+  return expectedSum - actualSum;
 }
 
-console.log(calculate("1+3"));  
+// Tekshirish
+console.log(missingNumber([4, 0, 2, 1]));         
+console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])); 
+
+
+// Task R
+// function calculate(str: string): number {
+//   const numbers = str.split("+");     
+//   let sum = 0;
+
+//   for (const n of numbers) {
+//     sum += Number(n.trim());                   
+//   }
+//   return sum;
+// }
+
+// console.log(calculate("1+3"));  
 
 // Task Q
 
@@ -60,6 +74,17 @@ console.log(calculate("1+3"));
  *
  * Traditional FD => SSR (Adminka) => EJS
  * Modern FD => SPA (Users' application) => REACT
+ */
+
+/** Cookies:
+ * request join
+ * self detroy
+ */
+
+/**  Validations:
+ * Frontend validation
+ * Backend validation
+ * Database validation
  */
 
 // task N
