@@ -1,16 +1,40 @@
 
-// Task S 
-function missingNumber(nums: number[]): number {
-  const n = nums.length;
-  const expectedSum = (n * (n + 1)) / 2;
-  const actualSum = nums.reduce((sum, num) => sum + num, 0);
+// Task T
+function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+  const result: number[] = [];
+  let i = 0;
+  let j = 0; 
 
-  return expectedSum - actualSum;
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] <= arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) result.push(arr1[i++]);
+  while (j < arr2.length) result.push(arr2[j++]);
+
+  return result;
 }
 
-// Tekshirish
-console.log(missingNumber([4, 0, 2, 1]));         
-console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])); 
+console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30])); 
+console.log(mergeSortedArrays([1, 5], [3, 2, 4])); 
+// Task S 
+// function missingNumber(nums: number[]): number {
+//   const n = nums.length;
+//   const expectedSum = (n * (n + 1)) / 2;
+//   const actualSum = nums.reduce((sum, num) => sum + num, 0);
+
+//   return expectedSum - actualSum;
+// }
+
+// // Tekshirish
+// console.log(missingNumber([4, 0, 2, 1]));         
+// console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])); 
 
 
 // Task R
