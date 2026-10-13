@@ -39,6 +39,27 @@ restaurantController.getLogin = (req: Request, res: Response) => {
     }
 };
 
+restaurantController.processLogin = async (req: AdminRequest, res: Response) => {
+    try {
+        console.log("processLogin");
+
+        const input : LoginInput = req.body;
+        const result = await memberService.processLogin(input);
+
+        req.session.member = result;
+        req.session.save( function () {
+            res.redirect("/admin/product/all");
+        });
+    } catch (err) {
+        console.log("Error, processLogin:", err);
+        const message =
+        err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
+        res.send(
+            `<script>alert("${message}"); window.location.replace("/admin/login")</script>`
+        );
+    }
+};
+
 
 restaurantController.processSignup = async (req: AdminRequest, res: Response) => {
     try {
@@ -77,26 +98,28 @@ restaurantController.logout = async (req: AdminRequest, res: Response) => {
     }
 };
 
-restaurantController.processLogin = async (req: AdminRequest, res: Response) => {
+restaurantController.getUsers = async (req: Request, res: Response) => {
     try {
-        console.log("processLogin");
+        console.log("getUsers");
+        const result = await memberService.getUsers();
+        console.log("result:", result);
 
-        const input : LoginInput = req.body;
-        const result = await memberService.processLogin(input);
-
-        req.session.member = result;
-        req.session.save( function () {
-            res.redirect("/admin/product/all");
-        });
+        res.render("users", { users: result });
     } catch (err) {
-        console.log("Error, processLogin:", err);
-        const message =
-        err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
-        res.send(
-            `<script>alert("${message}"); window.location.replace("/admin/login")</script>`
-        );
+        console.log("Error, getUsers:", err);
+        res.redirect("/admin/login");
     }
 };
+
+restaurantController.updateChosenUser = (req: Request, res: Response) => {
+    try {
+        console.log("updateChosenUser");
+    } catch (err) {
+        console.log("Error, updateChosenUser:", err);
+    }
+};
+
+
 
 restaurantController.checkAuthSession = async (req: AdminRequest, res: Response) => {
     try {
