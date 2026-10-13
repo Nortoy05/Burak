@@ -1,18 +1,34 @@
-// Task U
-function sumOdds(number: number): number {
-    let count: number = 0;
 
-    for (let i: number = 1; i <= number; i++) {
-        if (i % 2 !== 0) {
-            count++;
-        }
-    }
+// Task V
+function countChars(str: string): Record<string, number> {
+  const result: Record<string, number> = {};
 
-    return count;
+  for (const char of str) {
+    result[char] = (result[char] || 0) + 1;
+  }
+
+  return result;
 }
+ 
+console.log(countChars("authorization"));  
 
-console.log(sumOdds(9));  // 4
-console.log(sumOdds(11)); // 5
+
+
+// Task U
+// function sumOdds(number: number): number {
+//     let count: number = 0;
+
+//     for (let i: number = 1; i <= number; i++) {
+//         if (i % 2 !== 0) {
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+
+// console.log(sumOdds(9));  // 4
+// console.log(sumOdds(11)); // 5
 // Task T
 // function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
 //   const result: number[] = [];
