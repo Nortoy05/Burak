@@ -8,6 +8,9 @@ import { AdminRequest } from "../libs/types/member";
 const productService = new ProductService();
 
 const productController: T = {};
+/** SPA */
+
+/** SSR */
 productController.getAllProducts = async (req: Request, res: Response) => {
     try {
         console.log("getAllProducts");
