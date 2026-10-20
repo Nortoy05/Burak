@@ -1,16 +1,31 @@
 
-// Task V
-function countChars(str: string): Record<string, number> {
-  const result: Record<string, number> = {};
+// Task W
 
-  for (const char of str) {
-    result[char] = (result[char] || 0) + 1;
-  }
+function chunkArray(arr: number[], size: number): number[][] {
+    const result: number[][] = [];
 
-  return result;
+    for (let i = 0; i < arr.length; i += size) {
+        result.push(arr.slice(i, i + size));
+    }
+
+    return result;
 }
+
+console.log(chunkArray([1,2,3,4,5,6,7,8,9,10,11], 3));
+
+
+// Task V
+// function countChars(str: string): Record<string, number> {
+//   const result: Record<string, number> = {};
+
+//   for (const char of str) {
+//     result[char] = (result[char] || 0) + 1;
+//   }
+
+//   return result;
+// }
  
-console.log(countChars("authorization"));  
+// console.log(countChars("authorization"));  
 
 
 
