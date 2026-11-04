@@ -2,6 +2,7 @@ import express from "express";
 const router = express.Router();
 import memberController from "./controllers/membercontroller";
 import uploader from "./libs/utils/uploader";
+import productController from "./controllers/productcontroller";
 
 /** Member Routes */
 router.get("/member/restaurant", memberController.getRestaurant);
@@ -28,6 +29,7 @@ router.post(
 router.get("/member/top-users", memberController.getTopUsers);
 
 /** Product Routes */
+router.get("/product/all", productController.getProducts);
 
 /** Order Routes */
 
