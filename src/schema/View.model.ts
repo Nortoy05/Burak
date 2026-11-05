@@ -3,12 +3,12 @@ import { ViewGroup } from "../libs/enums/view.enum";
 
 const viewSchema = new Schema(
   {
-    ViewGroup: {
+    viewGroup: {
         type: String,
         enum: ViewGroup,
         required: true
     },
-    memberIdId: {
+    memberId: {
         type: Schema.Types.ObjectId,
         required: true,
         ref: "Member",
