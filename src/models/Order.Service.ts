@@ -77,7 +77,7 @@ class OrderService {
             { $limit: inquiry.limit },
             {
                 $lookup: {
-                    from: "orderItems",
+                    from: "OrderItems",
                     localField: "_id",
                     foreignField: "orderId",
                     as: "orderItems",
